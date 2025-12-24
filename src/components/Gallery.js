@@ -48,7 +48,7 @@ export function Album ({src, alt = 'Andy', w = 300, h = 300, important = 'low', 
           priority={important}
         />
       </div>
-      <div className="w-full xl:2/5 animate__animated animate__fadeInUp animate__delay-2s">
+      <div className="w-full xl:w-2/5 animate__animated animate__fadeInUp animate__delay-2s">
         {title && <h2 className="text-5xl/loose">{title}</h2>}
         {richText && (
           <div className="text-2xl/normal" dangerouslySetInnerHTML={{ __html: parsedText }} />
