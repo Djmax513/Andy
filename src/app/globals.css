@@ -124,3 +124,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+mux-player#vfx-background {
+  --media-object-fit: cover;
+  --media-object-position: center;
+  --controls: none
+}
