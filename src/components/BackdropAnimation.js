@@ -8,7 +8,6 @@ export function BackdropAnimation () {
   // useEffect(() => {
   //   const video =  document?.querySelector('mux-player#vfx-background')
   //   if(video) {
-  //     console.log('video', video)
   //     video.play()
   //   }
   // }, [])
@@ -21,6 +20,7 @@ export function BackdropAnimation () {
         className='h-screen w-screen'
         id="vfx-background"
         autoplay="muted"
+        loop
         playbackId="ZL00WRqKHblS01aMJlc02Iz02c4lbB019JsDL4j393nTRcmM"
         metadata={{
           video_id: "video-id-54321",

@@ -130,3 +130,15 @@ mux-player#vfx-background {
   --media-object-position: center;
   --controls: none
 }
+
+.album-carousel .is-in-view.is-snapped > div  {
+    animation: fadeIn;
+    animation-duration: 1.5s;
+}
+/*
+.album-carousel .is-in-view.is-snapped h2 {
+    animation: fadeInUp 1s 500ms;
+}
+.album-carousel .is-in-view.is-snapped p {
+    animation: fadeInUp 1s 500ms;
+}*/

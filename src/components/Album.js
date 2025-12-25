@@ -3,6 +3,8 @@
 
 import { Card, CardContent } from "@/components/ui/card"
 import { AspectRatio } from "./ui/aspect-ratio";
+import ClassNames from "embla-carousel-class-names";
+
 import {
   Carousel,
   CarouselContent,
@@ -13,71 +15,43 @@ import {
 
 import { Slide, Text, Collage } from '@/components/AlbumItem';
 
-const albumData = [
-  {
-    imgSrc: '/teste.jpg',
-    title: '1998',
-    content: "# Primeiro dia de aula dela",
-  },
-  {
-    imgSrc: '/teste2.jpg',
-    title: '2003',
-    content: "Qual a cor da sua camiseta colorida",
-  },
-  {
-    imgSrc: '/teste3.jpg',
-    title: '2010',
-    content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-  },
-  {
-    imgSrc: '/teste4.jpg',
-    title: '2025',
-    content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-  }
-]
-
 export function Album() {
   return (
-    <Carousel opts={{align: "start"}} orientation="vertical" className=" w-full max-w-5xl rounded-2xl" style={{backdropFilter: "brightness(60%) blur(8px) saturate(140%)"}}>
+    <Carousel opts={{align: "start", watchFocus: true, active:true}} plugins={[ClassNames()]} orientation="vertical" className="album-carousel w-full max-w-5xl rounded-2xl" style={{backdropFilter: "brightness(60%) blur(8px) saturate(140%)"}}>
       <CarouselContent className='-mt-1 w-full h-[660px] xl:h-[660px] cursor-pointer'>
         {/* Itens do album */}
         
         <Box>
-          <Collage src="/teste.jpg" src2="/teste4.jpg" />
-        </Box>
-        <Box>
-          <Text>
-            <p>odkjendsefsef</p>
-            <p>olass1</p>
-          </Text>
+          <Text content={"Fin d'une autre journée. <br><br> Como todo bom livro a vida é cheia de capítulos e mais um se encerra agora na sua vida... <br><br> Mas antes de continuar com sua jornada que tal darmos uma olhada em como tudo começou?"} />
         </Box>
 
-        <Box className=''>
-          <Slide
-            src="/teste2.jpg"
-            title="Titulo muito bem legal!!!"
-            richText="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
-          />
+        <Box>
+          <Slide src="/andys-analog-vault_01.jpg" rotate title={["1998"]} richText="No dia 23 de julho de 98 o céu se entristecia pois acabara de enviar um de seus anjinhos para a terra." />
         </Box>
         
         <Box>
-          <Text>
-            <p>odkjendsefsef</p>
-            <p>olass2</p>
-          </Text>
+          <Slide src="/andys-analog-vault_03.jpg" rotate title={["Primeiros Passos"]} richText="E desde de pequena deixou claro que seria especial." />
         </Box>
         
         <Box>
-          <Text>
-            <p>odkjendsefsef</p>
-            <p>olass3</p>
-          </Text>
+          <Slide src="/andys-analog-vault_04.jpg" rotate richText="Pois mesmo que tivesse algum problema, conseguia superá-lo sempre com um sorriso no rosto" />
         </Box>
+        
+        
+        {/* -------------- */}
+        
+        {/* */}
+        {/* <Box>
+          <Text content={"Poucos podem dizer que já viveram em dois milênios diferentes e assim como pensionistas e praticantes de caminhada Andy não está fora dessa estatística <br><br> E com essa grande experiência "} />
+        </Box>*/}
 
-        <Box className=''>
-          <Slide src="/teste3.jpg" title="2021"/>
-        </Box>
-        
+        {/* <Box>
+          <Collage src="" src2="/teste4.jpg" title="um titulo de teste" />
+        </Box>*/}
+
+        {/* <Box>
+          <Text content={'teste <br> ola mundo'} />
+        </Box>*/}
         
         {/* Itens do album */}
       </CarouselContent>
